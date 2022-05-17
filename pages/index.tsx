@@ -1,84 +1,114 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-
+// import Image from 'next/image'
+// import photo from '../public/images/image.jpg'
+// import photo2 from '../public/images/image2.jpg'
+// import photo3 from '../public/images/image3.jpg'
+import NextImage from '../components/NextImage'
 const Home: NextPage = () => {
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
-        <title>Create Next App</title>
+        <title>Image optimization with blur effect</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
+      <header className="mt-4 mb-8 w-2/4 text-center">
+        <h1 className="text-xl font-bold">
+          Lazy loading images using Next.js Image component and TailwindCss for
+          the blur effect
         </h1>
+      </header>
+      {/* <img src="https://links.papareact.com/d7l" /> */}
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      {/* <Image src="https://links.papareact.com/d7l" height={1080} width={1920}/> */}
+      {/* If we don't know the height and width we can use layout fill but needs a parent container
+      with position relative
+      using the attribute priority will request the image before any other image
+      */}
+      <div className="flex w-full flex-wrap">
+        <div className="relative mb-4 w-2/4 pt-[50%]">
+          <NextImage
+            src="https://source.unsplash.com/9QCoFjDFp-A"
+            priority
+            // placeholder="blur"
+            // blurDataURL={photo2}
+          />
         </div>
-      </main>
+        <div className="relative mb-4 w-2/4 pt-[50%]">
+          <NextImage
+            src="https://source.unsplash.com/gN0yrOzZMDc"
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
+            // priority
+            // placeholder="blur"
+            // blurDataURL={photo2}
+          />
+        </div>
+        <div className="relative mb-4 w-2/4 pt-[50%]">
+          <NextImage
+            src="https://source.unsplash.com/RcmtTYRlVPg"
+
+            // priority
+            // placeholder="blur"
+            // blurDataURL={photo2}
+          />
+        </div>
+        <div className="relative mb-4 w-2/4 pt-[50%]">
+          <NextImage
+            src="https://source.unsplash.com/MXUxWrC_Pe0"
+
+            // priority
+            // placeholder="blur"
+            // blurDataURL={photo2}
+          />
+        </div>
+        <div className="relative mb-4 w-2/4 pt-[50%]">
+          <NextImage
+            src="https://source.unsplash.com/WOYz4cghgOE"
+
+            // priority
+            // placeholder="blur"
+            // blurDataURL={photo2}
+          />
+        </div>
+        <div className="relative mb-4 w-2/4 pt-[50%]">
+          <NextImage
+            src="https://source.unsplash.com/G6OmGkAnN2U"
+
+            // priority
+            // placeholder="blur"
+            // blurDataURL={photo2}
+          />
+        </div>
+        <div className="relative mb-4 w-2/4 pt-[50%]">
+          <NextImage
+            src="https://source.unsplash.com/qQk6ioeLBMc"
+
+            // priority
+            // placeholder="blur"
+            // blurDataURL={photo2}
+          />
+        </div>
+        <div className="relative mb-4 w-2/4 pt-[50%]">
+          <NextImage
+            src="https://source.unsplash.com/VNT4qAZMWvo"
+
+            // priority
+            // placeholder="blur"
+            // blurDataURL={photo2}
+          />
+        </div>
+        <div className="relative mb-4 w-2/4 pt-[50%]">
+          <NextImage
+            src="https://source.unsplash.com/FUkVrzJY5A0"
+
+            // priority
+            // placeholder="blur"
+            // blurDataURL={photo2}
+          />
+        </div>
+      </div>
+
+      {/* <Image src={photo}/>   */}
     </div>
   )
 }
